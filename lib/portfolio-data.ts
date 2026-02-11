@@ -103,6 +103,7 @@ export const ABOUT = {
   name: "Aryan Goel",
   title: "Software Engineer",
   bio: "Hi, I'm Aryan, a Computer Science Specialist at the University of Toronto (cGPA 3.96), graduating in May 2026, and actively seeking full-time Software Engineer new grad roles. When I'm not coding or building stuff, I split my time between basketball courts and FIFA matches. Happy to connect or chat. Feel free to reach out at aryangoel24@gmail.com :)",
+  resumeUrl: "https://drive.google.com/file/d/1jF6RNEpgDaGdJWH8oiaN9Wb9pjr7_QpB/view?usp=drive_link",
   socials: [
     { label: "GitHub", url: "https://github.com/aryangoel24" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/aryangoel/" },
@@ -119,11 +120,11 @@ export interface SkillCategory {
 export const SKILLS_DETAIL: SkillCategory[] = [
   {
     category: "Languages",
-    skills: ["Python", "C/C++", "Java", "JavaScript", "TypeScript", "SQL", "Bash", "Ruby on Rails"],
+    skills: ["Python", "C/C++", "Java", "JavaScript/TypeScript", "SQL", "Bash", "Ruby on Rails"],
   },
   {
-    category: "Frameworks",
-    skills: ["React", "Redis", "Node.js", "Express", "Django", "GraphQL", "PyTorch", "TensorFlow", "Next.js"],
+    category: "Frameworks & Libraries",
+    skills: ["React", "Redis", "Node.js", "Express", "Django", "GraphQL", "PyTorch", "TensorFlow", "Next.js", "FastAPI", "Pydantic", "Pandas", "Numpy"],
   },
   {
     category: "Tools",

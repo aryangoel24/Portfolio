@@ -47,6 +47,18 @@ export function AboutSection() {
                 </a>
               ))}
             </div>
+
+            {/* Resume CTA */}
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={ABOUT.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border border-primary px-4 py-2 text-xs font-mono text-primary hover:border-primary/80 hover:text-primary/90 transition-colors"
+              >
+                View Resume
+              </a>
+            </div>
           </div>
         </div>
 
