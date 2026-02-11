@@ -15,7 +15,7 @@ export function PlanetLegend({ onSelect }: PlanetLegendProps) {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, delay: 1.2 }}
-      className="absolute right-6 top-1/2 -translate-y-1/2 z-10 hidden md:flex flex-col gap-3"
+      className="absolute right-6 top-1/2 -translate-y-1/2 z-10 hidden md:flex flex-col gap-4"
       aria-label="Planet navigation"
     >
       {WORLDS.map((world) => (
@@ -23,16 +23,16 @@ export function PlanetLegend({ onSelect }: PlanetLegendProps) {
           key={world.id}
           type="button"
           onClick={() => onSelect(world.id)}
-          className="group flex items-center gap-2.5 bg-transparent border-none cursor-pointer p-0 text-left"
+          className="group flex items-center gap-3.5 bg-transparent border-none cursor-pointer p-0 text-left"
         >
           <span
-            className="block h-2.5 w-2.5 rounded-full shrink-0 transition-shadow duration-300 group-hover:shadow-[0_0_8px_var(--dot-color)]"
+            className="block h-3.5 w-3.5 rounded-full shrink-0 transition-shadow duration-300 group-hover:shadow-[0_0_10px_var(--dot-color)]"
             style={{
               background: world.color,
               "--dot-color": world.color,
             } as React.CSSProperties}
           />
-          <span className="text-xs font-mono text-muted-foreground group-hover:text-foreground transition-colors duration-200">
+          <span className="text-sm md:text-base font-mono text-muted-foreground group-hover:text-foreground transition-colors duration-200">
             {world.label}
           </span>
         </button>

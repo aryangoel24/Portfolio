@@ -105,10 +105,11 @@ export const ABOUT = {
   bio: "Hi, I'm Aryan, a Computer Science Specialist at the University of Toronto (cGPA 3.96), graduating in May 2026, and actively seeking full-time Software Engineer new grad roles. When I'm not coding or building stuff, I split my time between basketball courts and FIFA matches. Happy to connect or chat. Feel free to reach out at aryangoel24@gmail.com :)",
   socials: [
     { label: "GitHub", url: "https://github.com/aryangoel24" },
-    { label: "LinkedIn", url: "https://linkedin.com/in/aryangoel24" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/aryangoel/" },
     { label: "Email", url: "mailto:aryangoel24@gmail.com" },
   ],
 };
+
 
 export interface SkillCategory {
   category: string;
@@ -143,22 +144,29 @@ export const PROJECTS_DETAIL: Project[] = [
     description:
       "Implemented an LSM-tree based KV-store with SST persistence, manifest reconstruction, B-tree indexing, bloom filters, and multi-level compaction. Developed extensive integration tests, optimized page-cache access for faster reads, and benchmarked throughput at 1GB scale.",
     tags: ["C++", "LSM-tree", "B-tree", "Bloom Filters"],
-    url: "https://github.com/aryangoel24",
+    url: "https://github.com/aryangoel24/KV-Store",
   },
   {
     title: "SkillSprint",
     description:
       "Built an AI-driven skill-building platform with a modular widget architecture, integrating Firebase, GenAI workflows, and third-party APIs. Optimized performance via lazy loading and state refactors, reduced page load times, and designed extensible UI patterns to support rapid feature iteration.",
     tags: ["Next.js", "TypeScript", "Firebase", "GenAI"],
-    url: "https://github.com/aryangoel24",
+    url: "https://github.com/aryangoel24/SkillSprint",
   },
   {
     title: "PetPal -- Pet Adoption Platform",
     description:
       "Led a team of 4 to develop a full-stack pet adoption platform with RESTful APIs and an MVC-structured React frontend. Strengthened CI/CD reliability with 80% test coverage via Postman automated testing.",
     tags: ["Django", "React", "REST API", "Postman"],
-    url: "https://github.com/aryangoel24",
+    url: "https://github.com/aryangoel24/petpal",
   },
+  {
+    title: "Mini PRD Builder (Chat -> Structured PRD)",
+    description:
+      "Built a chat-based app that turns feature ideas into an evolving mini-PRD using structured LLM output. Enforced strict schema validation with Pydantic and implemented deterministic section rewrites to prevent duplicate requirements across turns. Added local persistence, Markdown export, and Dockerized setup.",
+    tags: ["React", "TypeScript", "FastAPI", "Pydantic", "OpenAI", "Docker"],
+    url: "https://github.com/aryangoel24/Mini-PRD-From-Chat",
+  }
 ];
 
 export interface Experience {
