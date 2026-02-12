@@ -7,13 +7,13 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative min-h-screen bg-background px-6 py-24 md:px-12 lg:px-24"
+      className="relative min-h-screen bg-card px-6 py-24 md:px-12 lg:px-24"
     >
       <div className="mx-auto max-w-4xl">
         <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">
           03 / Projects
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance leading-tight">
+        <h2 className="text-3xl md:text-4xl font-bold text-card-foreground text-balance leading-tight">
           Featured Projects
         </h2>
         <p className="mt-2 text-base text-muted-foreground leading-relaxed max-w-lg">
@@ -25,7 +25,7 @@ export function ProjectsSection() {
           {PROJECTS_DETAIL.map((project) => (
             <div
               key={project.title}
-              className="group rounded-xl border border-border bg-card p-6 flex flex-col gap-4 hover:border-primary/40 transition-colors"
+              className="group rounded-xl border border-border bg-background p-6 flex flex-col gap-4 hover:border-primary/40 transition-colors"
             >
               {/* Color accent bar */}
               <div className="h-1 w-12 rounded-full bg-primary" />

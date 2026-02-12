@@ -405,6 +405,15 @@ export function Planet({ world, isActive, onSelect }: PlanetProps) {
   // Animate time + axial rotation
   useFrame((state, delta) => {
     surfaceMat.uniforms.uTime.value = state.clock.elapsedTime;
+    if (groupRef.current) {
+      const targetScale = world.scale * (hovered ? 1.06 : 1);
+      const nextScale = THREE.MathUtils.lerp(
+        groupRef.current.scale.x,
+        targetScale,
+        1 - Math.pow(0.002, delta),
+      );
+      groupRef.current.scale.setScalar(nextScale);
+    }
     if (meshRef.current) {
       meshRef.current.rotation.y += delta * profile.spin;
     }

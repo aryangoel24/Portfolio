@@ -56,7 +56,7 @@ export function AboutSection() {
                 rel="noopener noreferrer"
                 className="rounded-lg border border-primary px-4 py-2 text-xs font-mono text-primary hover:border-primary/80 hover:text-primary/90 transition-colors"
               >
-                View Resume
+                Check out my resume
               </a>
             </div>
           </div>

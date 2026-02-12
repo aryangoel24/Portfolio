@@ -27,10 +27,10 @@ export const WORLDS: WorldData[] = [
   {
     id: "personal",
     label: "Personal",
-    position: [-8, 0, 0],
+    position: [-9, 2, 0],
     color: "#14b8a6",
     emissive: "#0d9488",
-    scale: 1.6,
+    scale: 2,
     moons: [
       { label: "GitHub", color: "#a5b4fc", orbitRadius: 2.6, orbitSpeed: 0.4, size: 0.18 },
       { label: "LinkedIn", color: "#38bdf8", orbitRadius: 3.0, orbitSpeed: 0.3, size: 0.15 },
@@ -40,10 +40,10 @@ export const WORLDS: WorldData[] = [
   {
     id: "skills",
     label: "Skills",
-    position: [-2.5, 0, -3],
+    position: [-2.5, 2, -3],
     color: "#3b82f6",
     emissive: "#2563eb",
-    scale: 1.3,
+    scale: 1.6,
     moons: [
       { label: "Python", color: "#3776ab", orbitRadius: 2.2, orbitSpeed: 0.45, size: 0.2 },
       { label: "C/C++", color: "#00599c", orbitRadius: 2.6, orbitSpeed: 0.38, size: 0.18 },
@@ -55,11 +55,11 @@ export const WORLDS: WorldData[] = [
   },
   {
     id: "projects",
-    label: "Projects",
-    position: [4, 0, 1],
+    label: "Experience",
+    position: [4.5, 2, 1],
     color: "#f59e0b",
     emissive: "#d97706",
-    scale: 1.45,
+    scale: 1.8,
     moons: [
       { label: "KV Store", color: "#fbbf24", orbitRadius: 2.8, orbitSpeed: 0.38, size: 0.22, meta: { tags: ["C++", "LSM-tree", "B-tree"], desc: "LSM-tree based key-value store with SST persistence and bloom filters." } },
       { label: "SkillSprint", color: "#fb923c", orbitRadius: 3.4, orbitSpeed: 0.28, size: 0.2, meta: { tags: ["Next.js", "TypeScript", "Firebase"], desc: "AI-driven skill-building platform with modular widget architecture." } },
@@ -68,11 +68,11 @@ export const WORLDS: WorldData[] = [
   },
   {
     id: "experience",
-    label: "Experience",
-    position: [10, 0, -1],
+    label: "Projects",
+    position: [12, 2, -1],
     color: "#ec4899",
     emissive: "#db2777",
-    scale: 1.25,
+    scale: 1.5,
     moons: [
       { label: "Shopify", color: "#95bf47", orbitRadius: 2.5, orbitSpeed: 0.4, size: 0.2, meta: { role: "Software Engineering Intern", period: "May 2025 - Dec 2025" } },
       { label: "Algoverse", color: "#f472b6", orbitRadius: 3.0, orbitSpeed: 0.32, size: 0.18, meta: { role: "Research Engineer", period: "Sep 2025 - Present" } },
@@ -89,11 +89,11 @@ export const CAMERA_POSITIONS: Record<
   WorldId | "overview",
   { position: [number, number, number]; target: [number, number, number] }
 > = {
-  overview: { position: [1, 10, 18], target: [1, 0, 0] },
-  personal: { position: [-6, 3.5, 6], target: [-8, 0, 0] },
-  skills: { position: [-0.5, 3.5, 3.5], target: [-2.5, 0, -3] },
-  projects: { position: [6, 3.5, 7], target: [4, 0, 1] },
-  experience: { position: [12, 3.5, 5], target: [10, 0, -1] },
+  overview: { position: [1, 10, 18], target: [1, 0.5, 0] },
+  personal: { position: [-6, 3.5, 6], target: [-8, 0.5, 0] },
+  skills: { position: [-0.5, 3.5, 3.5], target: [-2.5, 0.5, -3] },
+  projects: { position: [6, 3.5, 7], target: [4, 0.5, 1] },
+  experience: { position: [12, 3.5, 5], target: [10, 0.5, -1] },
 };
 
 /* ------------------------------------------------------------------ */
@@ -148,21 +148,21 @@ export const PROJECTS_DETAIL: Project[] = [
     url: "https://github.com/aryangoel24/KV-Store",
   },
   {
-    title: "SkillSprint",
+    title: "SkillSprint - AI-driven Skill-building Platform",
     description:
       "Built an AI-driven skill-building platform with a modular widget architecture, integrating Firebase, GenAI workflows, and third-party APIs. Optimized performance via lazy loading and state refactors, reduced page load times, and designed extensible UI patterns to support rapid feature iteration.",
     tags: ["Next.js", "TypeScript", "Firebase", "GenAI"],
     url: "https://github.com/aryangoel24/SkillSprint",
   },
   {
-    title: "PetPal -- Pet Adoption Platform",
+    title: "PetPal - Pet Adoption Platform",
     description:
       "Led a team of 4 to develop a full-stack pet adoption platform with RESTful APIs and an MVC-structured React frontend. Strengthened CI/CD reliability with 80% test coverage via Postman automated testing.",
     tags: ["Django", "React", "REST API", "Postman"],
     url: "https://github.com/aryangoel24/petpal",
   },
   {
-    title: "Mini PRD Builder (Chat -> Structured PRD)",
+    title: "Mini PRD Builder (Chat to Structured PRD)",
     description:
       "Built a chat-based app that turns feature ideas into an evolving mini-PRD using structured LLM output. Enforced strict schema validation with Pydantic and implemented deterministic section rewrites to prevent duplicate requirements across turns. Added local persistence, Markdown export, and Dockerized setup.",
     tags: ["React", "TypeScript", "FastAPI", "Pydantic", "OpenAI", "Docker"],
@@ -180,7 +180,7 @@ export interface Experience {
 export const EXPERIENCES_DETAIL: Experience[] = [
   {
     company: "Shopify",
-    role: "Software Engineering Intern -- Flow Automations",
+    role: "Software Engineering Intern - Flow Automations",
     period: "May 2025 - Dec 2025",
     bullets: [
       "Redesigned workflow state architecture to support AI-assisted edits with draft versioning, enabling safe rollback and diffing across revisions.",
@@ -190,7 +190,7 @@ export const EXPERIENCES_DETAIL: Experience[] = [
   },
   {
     company: "Algoverse",
-    role: "Research Engineer -- AI Safety Research",
+    role: "Research Engineer - AI Safety Research",
     period: "Sep 2025 - Present",
     bullets: [
       "Designed adversarial-vs-monitoring experiments on WMDP and BigCodeBench to study scalable oversight and chain-of-thought manipulation in LLMs.",
@@ -200,7 +200,7 @@ export const EXPERIENCES_DETAIL: Experience[] = [
   },
   {
     company: "Veeva Systems",
-    role: "Software Engineering Intern -- SafetyDocs",
+    role: "Software Engineering Intern - SafetyDocs",
     period: "May 2024 - Apr 2025",
     bullets: [
       "Developed named entity extraction pipelines for literature abstracts, automatically generating related safety records for pharmacovigilance teams.",

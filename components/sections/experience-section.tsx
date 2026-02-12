@@ -7,13 +7,13 @@ export function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="relative min-h-screen bg-card px-6 py-24 md:px-12 lg:px-24"
+      className="relative min-h-screen bg-background px-6 py-24 md:px-12 lg:px-24"
     >
       <div className="mx-auto max-w-4xl">
         <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">
           04 / Experience
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-card-foreground text-balance leading-tight">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance leading-tight">
           Work Experience
         </h2>
         <p className="mt-2 text-base text-muted-foreground leading-relaxed max-w-lg">
@@ -35,7 +35,7 @@ export function ExperienceSection() {
               </div>
 
               {/* Content */}
-              <div className="flex-1 pb-8 rounded-xl border border-border bg-background p-5">
+              <div className="flex-1 pb-8 rounded-xl border border-border bg-card p-5">
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                   <h3 className="text-base font-bold text-card-foreground">
                     {exp.company}
