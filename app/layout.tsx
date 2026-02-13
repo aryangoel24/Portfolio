@@ -15,7 +15,7 @@ const _spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Stellar Portfolio | 3D Interactive Experience",
+  title: "Aryan Goel | Portfolio",
   description:
     "An immersive 3D portfolio showcasing skills, projects, and experience through an interactive cosmic universe.",
 };
